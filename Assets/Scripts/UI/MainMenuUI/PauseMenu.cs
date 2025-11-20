@@ -4,9 +4,11 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
+    [Header("Scenes where UI is allowed")]
+
     public const string MAIN_MENU_SCENE = "MainMenuScene";
-    private GameObject pauseMenu => StaticUIManager.Instance.PauseMenu;
-    private GameObject gameUI => StaticUIManager.Instance.Hud;
+    private GameObject pauseMenu;
+    private GameObject gameUI;
 
     private void Awake()
     {
@@ -14,6 +16,8 @@ public class PauseMenu : MonoBehaviour
         StaticUIManager.Instance?.LeaveButton.onClick.AddListener(OnLeaveClicked);
     }
     private void Start() {
+        pauseMenu = StaticUIManager.Instance.PauseMenu;
+        gameUI = StaticUIManager.Instance.Hud;
         pauseMenu.SetActive(false);
     }
     private void Update() {
