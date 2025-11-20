@@ -4,16 +4,14 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] private Button resumeButton;
-    [SerializeField] private Button leaveButton;
-
     public const string MAIN_MENU_SCENE = "MainMenuScene";
-    [SerializeField] private GameObject pauseMenu;
+    private GameObject pauseMenu => StaticUIManager.Instance.PauseMenu;
+    private GameObject gameUI => StaticUIManager.Instance.Hud;
 
     private void Awake()
     {
-        resumeButton.onClick.AddListener(OnResumeClicked);
-        leaveButton.onClick.AddListener(OnLeaveClicked);
+        StaticUIManager.Instance?.ResumeButton.onClick.AddListener(OnResumeClicked);
+        StaticUIManager.Instance?.LeaveButton.onClick.AddListener(OnLeaveClicked);
     }
     private void Start() {
         pauseMenu.SetActive(false);
@@ -24,7 +22,10 @@ public class PauseMenu : MonoBehaviour
         }
     }
     private void OnResumeClicked() => TogglePause();
-    private void TogglePause() => pauseMenu.SetActive(!pauseMenu.activeSelf);
+    private void TogglePause() {
+        gameUI.SetActive(!pauseMenu.activeSelf);
+        pauseMenu.SetActive(!pauseMenu.activeSelf);
+    }
 
     private void OnLeaveClicked()
     {

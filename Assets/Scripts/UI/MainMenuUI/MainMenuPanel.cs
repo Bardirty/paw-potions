@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class MainMenuPanel : MonoBehaviour
 {
-    public const string PLAY_SCENE_NAME = "GameScene";
+    public const string PLAY_SCENE_NAME = "ClientScene";
 
     [Header("Button")]
     [SerializeField] private Button playButton;
