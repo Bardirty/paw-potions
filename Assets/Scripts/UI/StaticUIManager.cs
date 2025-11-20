@@ -9,7 +9,7 @@ public class StaticUIManager : MonoBehaviour {
     public const string MAIN_MENU_SCENE = "MainMenuScene";
     public const string CLIENT_SCENE = "ClientScene";
     public const string WORKSHOP_SCENE = "WorkshopScene";
-    
+
     public string[] allowedScenes = { CLIENT_SCENE, WORKSHOP_SCENE };
 
 
@@ -44,7 +44,7 @@ public class StaticUIManager : MonoBehaviour {
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
         if (!allowedScenes.Contains(scene.name)) {
-            SceneManager.sceneLoaded -= OnSceneLoaded; // <<< фикс
+            SceneManager.sceneLoaded -= OnSceneLoaded;
             Destroy(gameObject);
             return;
         }
@@ -72,8 +72,15 @@ public class StaticUIManager : MonoBehaviour {
         }
     }
 
-    private void OnClientClicked() => SceneManager.LoadScene(CLIENT_SCENE);
-    private void OnWorkshopClicked() => SceneManager.LoadScene(WORKSHOP_SCENE);
+    private void OnClientClicked() {
+        if (SceneManager.GetActiveScene().name != CLIENT_SCENE)
+            SceneManager.LoadScene(CLIENT_SCENE);
+    }
+
+    private void OnWorkshopClicked() {
+        if(SceneManager.GetActiveScene().name != WORKSHOP_SCENE)
+            SceneManager.LoadScene(WORKSHOP_SCENE);
+    }
 
     private void OnBookClicked() {
         bookPanel.SetActive(!bookPanel.activeSelf);
