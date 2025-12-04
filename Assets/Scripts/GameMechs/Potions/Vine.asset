@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91357f92bd2b3fc4ab29cf95bddd163f, type: 3}
+  m_Name: Vine
+  m_EditorClassIdentifier: 
+  potionName: Wino Ukojenia
+  potionSprite: {fileID: 21300000, guid: f2279632dbac6b34f9816fa265b464d7, type: 3}
+  description: "Dzia\u0142a jak mi\u0119kka mgie\u0142ka spowalniaj\u0105ca l\u0119k
+    i panik\u0119. Skuteczne, gdy cia\u0142o jest spi\u0119te, a oddech kr\xF3tki
+    i nerwowy."
+  ingredients:
+  - {fileID: 11400000, guid: 8e4cf80443ff7c4409d3974b82eaba4f, type: 2}
+  - {fileID: 11400000, guid: 712577249241eb04e9ae5a9e66d1d8ee, type: 2}

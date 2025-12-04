@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ded1fd3fb4b8741bc8d8bfd6f14f75, type: 3}
+  m_Name: koliber_intro_dialogline_2
+  m_EditorClassIdentifier: 
+  dialogLine: "\u201EBo widzisz\u2026 ja mam taki ma\u0142y\u2026 no\u2026 jakby\u2026
+    nadmiar energii! Tak du\u017Co energiiii. Latam w t\u0105 i w tamt\u0105. Chcia\u0142am
+    usi\u0105\u015B\u0107, ale przypomnia\u0142am sobie, \u017Ce mia\u0142am sprawdzi\u0107
+    trzy kwiatki dalej i\u2026 i w sumie to zapomnia\u0142am, co ja sprawdza\u0142am.
+    Wiesz jak jest.\u201D"
+  characterSpriteIndex: 0

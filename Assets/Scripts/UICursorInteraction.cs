@@ -13,6 +13,8 @@ public class UICursorInteraction : MonoBehaviour, IPointerEnterHandler, IPointer
         CursorManager.Instance.SetBasicCursor();
     }
     public void OnPointerDown(PointerEventData eventData) {
+        if (SoundManager.Instance != null)
+            SoundManager.Instance.PlayGUIPress();
         CursorManager.Instance.SetHoldCursor();
     }
 

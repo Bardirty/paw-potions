@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28651f6422bb0ec4688f863d31eb8fa5, type: 3}
+  m_Name: Jackalope
+  m_EditorClassIdentifier: 
+  personName: Jackalope
+  personSprites:
+  - {fileID: 21300000, guid: 2dae813db0462f74e8bbbc3f5526c23b, type: 3}
+  - {fileID: 21300000, guid: 1f801d20e81d1bc4e81a87fdd444ab5e, type: 3}
+  interludeDialog: {fileID: 11400000, guid: 1cf6a5525a4205e42868e1b8768bc8f8, type: 2}
+  positiveDialog: {fileID: 11400000, guid: 02b1d5f31846bdd4bb462a29569adaa3, type: 2}
+  negativeDialog: {fileID: 11400000, guid: 25c6e2ecb9b089a4688a1d52701e12aa, type: 2}
+  correctPotion: {fileID: 11400000, guid: bfd9c3236f108a747b6be3dc12a91cf7, type: 2}
+  personTheme: {fileID: 8300000, guid: 51b01fcb087d15b47907d662e27fb3fc, type: 3}

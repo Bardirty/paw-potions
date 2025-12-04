@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91357f92bd2b3fc4ab29cf95bddd163f, type: 3}
+  m_Name: Tonic
+  m_EditorClassIdentifier: 
+  potionName: "Tonik Ziele\u0144 My\u015Bli"
+  potionSprite: {fileID: 21300000, guid: dc09558f0bb355f4ab41a3e7ca167b13, type: 3}
+  description: "Oczyszcza g\u0142ow\u0119 z mg\u0142y mentalnej, poprawiaj\u0105c
+    skupienie i jasno\u015B\u0107. Dzia\u0142a jak \u015Bwie\u017Cy powiew na zm\u0119czony,
+    zamglony intelekt."
+  ingredients:
+  - {fileID: 11400000, guid: 3928d64ac98e8634da55f61ef3c62bda, type: 2}
+  - {fileID: 11400000, guid: f0cffe8f0522a804199485112ade6d5a, type: 2}

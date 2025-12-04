@@ -1774,7 +1774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryManager: {fileID: 376983005}
-  currentGraph: {fileID: 0}
+  currentGraph: {fileID: 11400000, guid: 5d79e1b8887237046b617886a06d90e4, type: 2}
   currentNode: {fileID: 0}
   awaitingPotion: 0
   pendingPotionRequest: {fileID: 0}

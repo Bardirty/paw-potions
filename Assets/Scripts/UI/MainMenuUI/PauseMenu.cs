@@ -4,8 +4,7 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    [Header("Scenes where UI is allowed")]
-
+    [SerializeField] private Button pauseButton;
     public const string MAIN_MENU_SCENE = "MainMenuScene";
     private GameObject pauseMenu;
     private GameObject gameUI;
@@ -18,6 +17,7 @@ public class PauseMenu : MonoBehaviour
     private void Start() {
         pauseMenu = StaticUIManager.Instance.PauseMenu;
         gameUI = StaticUIManager.Instance.Hud;
+        pauseButton.onClick.AddListener(TogglePause);
         pauseMenu.SetActive(false);
     }
     private void Update() {
@@ -27,7 +27,7 @@ public class PauseMenu : MonoBehaviour
     }
     private void OnResumeClicked() => TogglePause();
     private void TogglePause() {
-        gameUI.SetActive(!pauseMenu.activeSelf);
+        gameUI.SetActive(pauseMenu.activeSelf);
         pauseMenu.SetActive(!pauseMenu.activeSelf);
     }
 

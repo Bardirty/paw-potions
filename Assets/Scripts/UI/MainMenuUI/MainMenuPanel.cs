@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class MainMenuPanel : MonoBehaviour
 {
-    public const string PLAY_SCENE_NAME = "ClientScene";
+    public const string PLAY_SCENE_NAME = "DayStartScene";
 
     [Header("Button")]
     [SerializeField] private Button playButton;
@@ -23,6 +23,10 @@ public class MainMenuPanel : MonoBehaviour
         settingsButton.onClick.AddListener(OnSettingsButtonClicked);
         creditsButton.onClick.AddListener(OnCreditsButtonClicked);
         exitButton.onClick.AddListener(OnExitButtonClicked);
+    }
+    private void Start() {
+        if(MusicManager.Instance != null)
+            MusicManager.Instance.PlayMainMenuMusic();
     }
 
     private void OnPlayButtonClicked()

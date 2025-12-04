@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91357f92bd2b3fc4ab29cf95bddd163f, type: 3}
+  m_Name: Harmony
+  m_EditorClassIdentifier: 
+  potionName: "Esencja Harmonicznego Umys\u0142u"
+  potionSprite: {fileID: 21300000, guid: d5998bb66b5fb1b43b53764873031a0d, type: 3}
+  description: "Przywraca wewn\u0119trzn\u0105 stabilno\u015B\u0107 i porz\u0105dkuje
+    rozproszony strumie\u0144 my\u015Bli. Idealna przy przeci\u0105\u017Ceniu informacjami,
+    nadmiernym analizowaniu i chaosie psychicznym."
+  ingredients:
+  - {fileID: 11400000, guid: 29908a900748bad499c0ba559dc97886, type: 2}
+  - {fileID: 11400000, guid: f0cffe8f0522a804199485112ade6d5a, type: 2}
+  - {fileID: 11400000, guid: c826ed2564c4beb47a2df1e8afbaed36, type: 2}
+  - {fileID: 11400000, guid: dbf2282e076c4bc4ab2570a35c845729, type: 2}

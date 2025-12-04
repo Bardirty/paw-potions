@@ -1,40 +1,68 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class SettingsPanel : MonoBehaviour {
-
-    [Header("Params")]
+    [Header("Audio")]
     [SerializeField] private AudioMixer audioMixer;
-    [SerializeField] private Toggle volume;
+
+    [SerializeField] private Slider masterSlider;
+    [SerializeField] private Slider musicSlider;
+    [SerializeField] private Slider soundSlider;
+
+    [Header("UI")]
     [SerializeField] private Button backToMenu;
-
     [SerializeField] private GameObject mainMenuPanel;
-    private void Awake() {
-        volume.onValueChanged.AddListener(OnVolumeToggleChanged);
-        backToMenu.onClick.AddListener(OnBackToMenuClicked);
-        LoadPrefs();
 
+    private const string MASTER_KEY = "MasterVolume";
+    private const string MUSIC_KEY = "MusicVolume";
+    private const string SOUND_KEY = "SoundVolume";
+
+    private void Awake() {
+        masterSlider.onValueChanged.AddListener(SetMasterVolume);
+        musicSlider.onValueChanged.AddListener(SetMusicVolume);
+        soundSlider.onValueChanged.AddListener(SetSoundVolume);
+
+        backToMenu.onClick.AddListener(OnBackToMenuClicked);
+
+        LoadPrefs();
     }
+
     private void Start() {
         gameObject.SetActive(false);
     }
 
-    private void OnVolumeToggleChanged(bool isOn) {
-        audioMixer.SetFloat("MasterVolume", isOn ? 0f : -80f);
-    }
-    private void OnBackToMenuClicked() {
-        SavePrefs();
-        mainMenuPanel.SetActive(true);
-        gameObject.SetActive(false);
+    private void SetMasterVolume(float value)
+        => audioMixer.SetFloat("MasterVolume", SliderToDb(value));
+
+    private void SetMusicVolume(float value)
+        => audioMixer.SetFloat("MusicVolume", SliderToDb(value));
+
+    private void SetSoundVolume(float value)
+        => audioMixer.SetFloat("SoundVolume", SliderToDb(value));
+    private float SliderToDb(float sliderValue) {
+        return Mathf.Lerp(-80f, 0f, sliderValue);
     }
 
     private void LoadPrefs() {
-        volume.isOn = PlayerPrefs.GetInt("VolumeOn", 1) == 1;
-        OnVolumeToggleChanged(volume.isOn);
+        masterSlider.value = PlayerPrefs.GetFloat(MASTER_KEY, 1f);
+        musicSlider.value = PlayerPrefs.GetFloat(MUSIC_KEY, 1f);
+        soundSlider.value = PlayerPrefs.GetFloat(SOUND_KEY, 1f);
+
+        SetMasterVolume(masterSlider.value);
+        SetMusicVolume(musicSlider.value);
+        SetSoundVolume(soundSlider.value);
     }
+
     private void SavePrefs() {
-        PlayerPrefs.SetInt("VolumeOn", volume.isOn ? 1 : 0);
+        PlayerPrefs.SetFloat(MASTER_KEY, masterSlider.value);
+        PlayerPrefs.SetFloat(MUSIC_KEY, musicSlider.value);
+        PlayerPrefs.SetFloat(SOUND_KEY, soundSlider.value);
+    }
+    private void OnBackToMenuClicked() {
+        SavePrefs();
+
+        mainMenuPanel.SetActive(true);
+        gameObject.SetActive(false);
     }
 }

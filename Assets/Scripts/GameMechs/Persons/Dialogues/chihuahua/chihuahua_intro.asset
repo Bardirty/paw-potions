@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14ce181bd17e08d4a918c810d6cda3a0, type: 3}
+  m_Name: chihuahua_intro
+  m_EditorClassIdentifier: 
+  dialogLines:
+  - {fileID: 11400000, guid: 03a752f141f3599458c1a63933b35268, type: 2}
+  - {fileID: 11400000, guid: f283995c5fe21a1429229df8d92135a7, type: 2}
+  - {fileID: 11400000, guid: db643de46ff925a479702c91c8367de9, type: 2}
+  - {fileID: 11400000, guid: 247eca360ec64d04c89f73261f826d2d, type: 2}

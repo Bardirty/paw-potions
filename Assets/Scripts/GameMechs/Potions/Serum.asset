@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91357f92bd2b3fc4ab29cf95bddd163f, type: 3}
+  m_Name: Serum
+  m_EditorClassIdentifier: 
+  potionName: Serum Kwiatu Duszy
+  potionSprite: {fileID: 21300000, guid: e13385dea85304d429ade3b0158c2f94, type: 3}
+  description: "Delikatnie roz\u015Bwietla serce smutne lub przygaszone. Pomaga odzyska\u0107
+    lekko\u015B\u0107, pogodzi\u0107 si\u0119 z emocjami i znale\u017A\u0107 czu\u0142\u0105
+    ulg\u0119 w melancholii."
+  ingredients:
+  - {fileID: 11400000, guid: dbf2282e076c4bc4ab2570a35c845729, type: 2}
+  - {fileID: 11400000, guid: 8e4cf80443ff7c4409d3974b82eaba4f, type: 2}

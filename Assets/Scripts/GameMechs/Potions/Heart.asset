@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91357f92bd2b3fc4ab29cf95bddd163f, type: 3}
+  m_Name: Heart
+  m_EditorClassIdentifier: 
+  potionName: "Eliksir Czu\u0142ego Serca"
+  potionSprite: {fileID: 21300000, guid: 73ae335b72a62514384cd6b10c44306b, type: 3}
+  description: "Otwiera serce na ciep\u0142o i blisko\u015B\u0107, rozpuszczaj\u0105c
+    emocjonalne napi\u0119cia zwi\u0105zane z relacjami. Pomaga leczy\u0107 rany
+    sercowe, poczucie samotno\u015Bci i odrzucenia."
+  ingredients:
+  - {fileID: 11400000, guid: dbf2282e076c4bc4ab2570a35c845729, type: 2}
+  - {fileID: 11400000, guid: 712577249241eb04e9ae5a9e66d1d8ee, type: 2}
+  - {fileID: 11400000, guid: 3928d64ac98e8634da55f61ef3c62bda, type: 2}

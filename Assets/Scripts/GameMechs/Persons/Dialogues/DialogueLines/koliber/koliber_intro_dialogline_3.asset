@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ded1fd3fb4b8741bc8d8bfd6f14f75, type: 3}
+  m_Name: koliber_intro_dialogline_3
+  m_EditorClassIdentifier: 
+  dialogLine: "Czasem trudno mi\u2026 no\u2026 zosta\u0107 w jednym miejscu. I wtedy
+    pomy\u015Bla\u0142am\u2026 \u017Ce mo\u017Ce masz jak\u0105\u015B mikstur\u0119?
+    Tak\u0105, kt\xF3ra by mnie troch\u0119\u2026 uziemi\u0142a. No to\u2026 jak?
+    Masz mo\u017Ce mikstur\u0119. "
+  characterSpriteIndex: 1

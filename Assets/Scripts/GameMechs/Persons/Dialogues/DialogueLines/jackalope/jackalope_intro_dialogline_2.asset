@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ded1fd3fb4b8741bc8d8bfd6f14f75, type: 3}
+  m_Name: jackalope_intro_dialogline_2
+  m_EditorClassIdentifier: 
+  dialogLine: "Wiesz, jak to jest by\u0107 mn\u0105? To DU\u017BO roboty. Tu skocz,
+    tam p\u0119d\u017A, tu wygl\u0105daj majestatycznie, tam b\u0105d\u017A s\u0142odki\u2026
+    a ja ju\u017C nie mam si\u0142y. Ledwo mam si\u0142\u0119 sta\u0107, a co dopiero
+    b\u0142yszcze\u0107 i robi\u0107 te wszystkie rzeczy \u2018och-ale-uroczy\u2019,
+    kt\xF3rych wszyscy ode mnie oczekuj\u0105."
+  characterSpriteIndex: 0

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ded1fd3fb4b8741bc8d8bfd6f14f75, type: 3}
+  m_Name: jackalope_negative_dialogline_1
+  m_EditorClassIdentifier: 
+  dialogLine: "Ojejku. \u015Awiat zwalnia. Za bardzo. O nie\u2026 Ja nawet nie mam
+    si\u0142y by\u0107 ZNUDZONY! Jestem\u2026 jak kamie\u0144. Powiedz mi, \u017Ce
+    to nie mia\u0142o tak dzia\u0142a\u0107\u2026 Bywaj. "
+  characterSpriteIndex: 0

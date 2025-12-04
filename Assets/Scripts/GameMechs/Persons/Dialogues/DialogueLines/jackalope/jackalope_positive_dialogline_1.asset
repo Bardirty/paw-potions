@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ded1fd3fb4b8741bc8d8bfd6f14f75, type: 3}
+  m_Name: jackalope_positive_dialogline_1
+  m_EditorClassIdentifier: 
+  dialogLine: "O-O-OCH! Czuj\u0119\u2026 czuj\u0119 jak co\u015B mi mrowi w \u0142apach!
+    W uszach! W rogach! O rany, nawet ogon ta\u0144czy! Mam SI\u0141\u0118! Mog\u0119
+    biec! Mog\u0119 SKAKA\u0106! DZI\u0118KUJ\u0118! "
+  characterSpriteIndex: 1

@@ -9,12 +9,14 @@ public class StaticUIManager : MonoBehaviour {
     public const string MAIN_MENU_SCENE = "MainMenuScene";
     public const string CLIENT_SCENE = "ClientScene";
     public const string WORKSHOP_SCENE = "WorkshopScene";
+    public const string GAME_END = "EndingScene";
 
     public string[] allowedScenes = { CLIENT_SCENE, WORKSHOP_SCENE };
 
 
-    [SerializeField] private GameObject bookPanel;
-
+    [SerializeField] private BookController bookPanel;
+    [SerializeField] private ScreenAppear fader;
+    [SerializeField] private MoneyVisualizer moneyVisualizer;
     public static StaticUIManager Instance { get; private set; }
 
     [Header("HUDButtons")]
@@ -41,6 +43,32 @@ public class StaticUIManager : MonoBehaviour {
 
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
+    private void Start() {
+        if (DialogueManager.Instance != null)
+            DialogueManager.Instance.OnDialogueVisible += HUDOnDialogueReaction;
+        if (PersonManager.Instance != null)
+            PersonManager.Instance.OnPersonsEnded += FadeScreen;
+        if (fader != null)
+            fader.OnDisappear += LoadEnd;
+
+    }
+
+    private void OnDestroy() {
+        if (DialogueManager.Instance != null)
+            DialogueManager.Instance.OnDialogueVisible -= HUDOnDialogueReaction;
+        if (PersonManager.Instance != null)
+            PersonManager.Instance.OnPersonsEnded -= FadeScreen;
+        if (fader != null)
+            fader.OnDisappear -= LoadEnd;
+    }
+    private void FadeScreen() {
+        HUDOnDialogueReaction(true);
+        fader.gameObject.SetActive(true);
+        fader.Disappear();
+    }
+    private void LoadEnd() {
+        SceneManager.LoadSceneAsync(GAME_END);
+    }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
         if (!allowedScenes.Contains(scene.name)) {
@@ -48,10 +76,16 @@ public class StaticUIManager : MonoBehaviour {
             Destroy(gameObject);
             return;
         }
+        if (SceneManager.GetActiveScene().name == CLIENT_SCENE)
+            clientButton.Select();
+        if (SceneManager.GetActiveScene().name == WORKSHOP_SCENE)
+            workshopButton.Select();
         ReconnectUI();
     }
 
-
+    private void HUDOnDialogueReaction(bool status) {
+        Hud.SetActive(!status);
+    }
     private void ReconnectUI() {
         Canvas canvas = GetComponent<Canvas>();
         if (canvas == null) return;
@@ -71,6 +105,9 @@ public class StaticUIManager : MonoBehaviour {
             bookButton.onClick.AddListener(OnBookClicked);
         }
     }
+    public void UpdateMoney() {
+        moneyVisualizer.UpdateMoney();
+    }
 
     private void OnClientClicked() {
         if (SceneManager.GetActiveScene().name != CLIENT_SCENE)
@@ -83,6 +120,12 @@ public class StaticUIManager : MonoBehaviour {
     }
 
     private void OnBookClicked() {
-        bookPanel.SetActive(!bookPanel.activeSelf);
+        bookPanel.gameObject.SetActive(!bookPanel.gameObject.activeSelf);
+        if (SoundManager.Instance != null) {
+            if (bookPanel.gameObject.activeSelf) SoundManager.Instance.PlayBookOpen();
+            else SoundManager.Instance.PlayBookClose();
+        }
     }
+
+    public bool IsGameNotInteractable() => bookPanel.gameObject.activeSelf || PauseMenu.gameObject.activeSelf;
 }
